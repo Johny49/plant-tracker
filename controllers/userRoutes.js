@@ -1,0 +1,41 @@
+const router = require('express').Router();
+const { User, Plant} = require('../models');
+const withAuth = require('../utils/auth');
+
+
+router.get('/', withAuth, async (req, res) => {
+    try {
+        const usersData = await User.findAll({exclude: ['password']});
+        const users = usersData.map((user) => user.get({plain: true}))
+        res.render('users', users)
+    } catch (err){
+        res.status(500).json(err);
+    }
+});
+
+router.get('/:id', withAuth, (req, res) => {
+    try {
+        const userData = await User.findByPk(req.params.id,{
+            attributes:  { 
+                include: [{model: Plant}],
+                exclude : ['password']
+            }
+        });
+        const user = userData.get({plain: true});
+        res.render('user', user);
+    } catch (err){
+        res.status(500).json(err);
+    }
+});
+
+router.get('/:user_id/plant/:id', withAuth, (req, res) => {
+    try {
+        const plantData = Plant.findByPk(req.params.id);
+        const plant = plantData.get({plain: true})
+        res.render('plant', plant) 
+    } catch (err){
+        res.status(500).json(err);
+    }
+});
+
+module.exports = router;
