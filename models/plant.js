@@ -5,11 +5,15 @@ class Plant extends Model {}
 
 Plant.init(
   {
-    name: {
-      type: DataTypes.STRING,
+    id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     wikipedia_url: {
       type: DataTypes.STRING,
@@ -42,8 +46,8 @@ Plant.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'plants',
+    modelName: 'plant',
   }
 );
 
-module.exports = Plants;
+module.exports = Plant;
