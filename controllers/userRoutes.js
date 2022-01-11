@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-router.get('/:id', withAuth, (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id,{
             attributes:  { 
@@ -28,9 +28,9 @@ router.get('/:id', withAuth, (req, res) => {
     }
 });
 
-router.get('/:user_id/plant/:id', withAuth, (req, res) => {
+router.get('/:user_id/plant/:id', withAuth, async (req, res) => {
     try {
-        const plantData = Plant.findByPk(req.params.id);
+        const plantData = await Plant.findByPk(req.params.id);
         const plant = plantData.get({plain: true})
         res.render('plant', plant) 
     } catch (err){
