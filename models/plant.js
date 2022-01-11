@@ -3,13 +3,15 @@ const sequelize = require('../config/connection');
 
 class Plant extends Model {}
 
+
+
+
 Plant.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      primaryKey: true 
     },
     name: {
       type: DataTypes.STRING,
@@ -40,6 +42,12 @@ Plant.init(
         key: 'id',
       },
     },
+    nicknames: {
+      type: DataTypes.STRING,
+    },
+    notes: {
+      type: DataTypes.STRING,
+    }
   },
   {
     sequelize,
