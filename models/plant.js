@@ -5,27 +5,29 @@ class Plant extends Model {}
 
 Plant.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    wikipedia_url: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    attribution: {
+      type: DataTypes.STRING,
+    },
+    medium_url: {
+      type: DataTypes.STRING,
+    },
+    preferred_common_name: {
       type: DataTypes.STRING,
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -40,8 +42,8 @@ Plant.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'plants',
   }
 );
 
-module.exports = Project;
+module.exports = Plants;
