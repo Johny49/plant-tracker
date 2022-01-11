@@ -1,15 +1,17 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const request = require('request');
 
 class Plant extends Model {}
+
+
+
 
 Plant.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
@@ -40,6 +42,12 @@ Plant.init(
         key: 'id',
       },
     },
+    nicknames: {
+      type: DataTypes.STRING,
+    },
+    notes: {
+      type: DataTypes.STRING,
+    }
   },
   {
     sequelize,
