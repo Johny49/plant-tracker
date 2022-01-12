@@ -17,24 +17,6 @@ Plant.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    wikipedia_url: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    attribution: {
-      type: DataTypes.STRING,
-    },
-    medium_url: {
-      type: DataTypes.STRING,
-    },
-    preferred_common_name: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -42,12 +24,6 @@ Plant.init(
         key: 'id',
       },
     },
-    nicknames: {
-      type: DataTypes.STRING,
-    },
-    notes: {
-      type: DataTypes.STRING,
-    }
   },
   {
     sequelize,
