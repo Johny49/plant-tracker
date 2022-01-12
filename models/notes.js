@@ -10,7 +10,7 @@ Notes.init(
             allowNull:false,
             primaryKey: true
         },
-        name: {
+        nickname: {
             type: DataTypes.INTEGER,
             allowNull:false,
             primaryKey: true
