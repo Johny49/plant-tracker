@@ -18,4 +18,12 @@ router.get('/login', (req, res) =>{
 })
 
 
+router.get('/addPlant', (req, res) =>{
+    try {
+        res.render('addPlant');
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 module.exports = router
