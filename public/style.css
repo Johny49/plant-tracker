@@ -15,3 +15,24 @@
   max-height: 300px;
   
 }
+
+.login-card {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  background-color: #F7F0CE;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  color: var(--light);
+}
+.card-body {
+  font-size: 1.4rem;
+  text-align: ;
+  font-weight: bold;
+}
+
+#login{
+  height: auto;
+  width: 75vw;
+}
