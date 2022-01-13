@@ -7,7 +7,7 @@ const plantData =[
     },
     {
         "id":"5678678",
-        "name":"Hibicus"
+        "name":"Hibiscus"
 
     },
     {

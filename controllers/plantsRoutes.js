@@ -5,13 +5,11 @@ const axios = require('axios');
 
 router.get('/', async (req, res) => {
     try {
-        const plantApi = async (name) => {
-            const result = await axios.get(`https://api.inaturalist.org/v1/taxa?q=${name}`);
-            return result;
+        const plantApi =  (name) => {
+            const result =  axios.get(`https://api.inaturalist.org/v1/taxa?q=fern`);
+            console.log(result.url)
         }
-        
-        // console.log(result.data.result.results);
-        // return res.json(result.data.results[0]);
+        plantApi();
         const plantsData = await Plant.findAll({});
         const plants = plantsData.map((plant) => plant.get({plain: true}))
         
