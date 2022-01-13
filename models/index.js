@@ -13,20 +13,17 @@ User.hasOne(Notes, {
 Notes.belongsTo(User, {
   foreignKey: 'user_id',
 });
-
-User.hasMany(Plant, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE',
-  });
   
+Notes.belongsTo(Plant, {
+  foreignKey: 'plant_id'
+});
 
-  Plant.belongsTo(User, {
-    foreignKey: 'user_id',
+  Plant.hasMany(Notes, {
+   foreignKey: 'plant_id',
+   onDelete: 'CASCADE',
   });
 
-  Notes.belongsTo(Plant, {
-    foreignKey: 'plant_id'
-  });
+
   
 
 
