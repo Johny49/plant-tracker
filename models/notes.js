@@ -41,7 +41,7 @@ Notes.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'plant',
+        modelName: 'notes',
       }
 );
 
