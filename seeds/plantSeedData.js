@@ -3,16 +3,16 @@ const {Plant} = require('../models');
 const plantData =[
     {
         "id":"1434234234",
-        "plant":"Fern"
+        "name":"Fern"
     },
     {
         "id":"5678678",
-        "plant":"Hibicus"
+        "name":"Hibicus"
 
     },
     {
         "id":"14340982",
-        "plant":"Lion's Mane"
+        "name":"Lion's Mane"
 
     }
 ]
