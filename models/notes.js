@@ -8,7 +8,8 @@ Notes.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull:false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true,
         },
         nickname: {
             type: DataTypes.INTEGER,
