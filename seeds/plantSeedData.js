@@ -1,4 +1,6 @@
-[
+const {Plant} = require('../models');
+
+const plantData =[
     {
         "id":"1434234234",
         "nickname":"jigglypoof",
@@ -23,3 +25,7 @@
 
     }
 ]
+
+const seedPlant = () => Plant.bulkCreate(plantData);
+
+module.exports = seedPlant;
