@@ -2,7 +2,7 @@ const {Plant} = require('../models');
 
 const plantData =[
     {
-        "id":"1434234234",
+        "id":"1434234231",
         "name":"Fern"
     },
     {
