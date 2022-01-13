@@ -12,11 +12,11 @@ Notes.init(
             autoIncrement: true,
         },
         nickname: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull:false
         },
         note: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull:false
         },
         user_id: {
