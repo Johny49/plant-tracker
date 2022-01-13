@@ -4,24 +4,24 @@ const Notes = require('./Notes')
 
 
 User.hasOne(Notes, {
-  foreignKey: 'User_id',
+  foreignKey: 'user_id',
 
   onDelete: 'CASCADE',
 });
 
 
 Notes.belongsTo(User, {
-  foreignKey: 'User_id',
+  foreignKey: 'user_id',
 });
 
 User.hasMany(Plant, {
-    foreignKey: 'User_id',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE',
   });
   
 
   Plant.belongsTo(User, {
-    foreignKey: 'User_id',
+    foreignKey: 'user_id',
   });
 
 
