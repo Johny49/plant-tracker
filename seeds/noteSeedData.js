@@ -1,4 +1,6 @@
-[
+const {Notes} = require('../models');
+
+const noteData = [
     {
         "nickname":"jigglypoof",
         "note":"caught this bad boy in mt moon",
@@ -20,3 +22,7 @@
 
     }
 ]
+
+const seedNotes = () => Notes.bulkCreate(noteData);
+
+module.exports = seedNotes;
