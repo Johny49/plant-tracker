@@ -8,7 +8,8 @@ Notes.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull:false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true,
         },
         nickname: {
             type: DataTypes.INTEGER,
@@ -41,7 +42,7 @@ Notes.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'plant',
+        modelName: 'notes',
       }
 );
 
