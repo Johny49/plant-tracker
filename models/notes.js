@@ -12,18 +12,15 @@ Notes.init(
         },
         nickname: {
             type: DataTypes.INTEGER,
-            allowNull:false,
-            primaryKey: true
+            allowNull:false
         },
         note: {
             type: DataTypes.INTEGER,
-            allowNull:false,
-            primaryKey: true
+            allowNull:false
         },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull:false,
-            primaryKey: true,
             unique: true,
             references: {
                 model: 'user',
@@ -33,7 +30,6 @@ Notes.init(
         plant_id: {
             type: DataTypes.INTEGER,
             allowNull:false,
-            primaryKey: true,
             references: {
                 model: 'plant',
                 key: 'id',
@@ -45,7 +41,7 @@ Notes.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'notes',
+        modelName: 'plant',
       }
 );
 
