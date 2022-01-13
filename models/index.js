@@ -24,5 +24,11 @@ User.hasMany(Plant, {
     foreignKey: 'user_id',
   });
 
+  Notes.belongsTo(Plant, {
+    foreignKey: 'plant_id'
+  });
+  
+
+
 
 module.exports = { User, Plant, Notes };
