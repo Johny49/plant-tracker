@@ -41,3 +41,9 @@
   height: auto;
   width: 75vw;
 }
+
+#planter{
+text-decoration: none !important;
+color: rgb(0,102,0);
+}
+
