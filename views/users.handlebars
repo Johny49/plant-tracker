@@ -1,0 +1,14 @@
+<div class="container">
+   <section class="row justify-content-center">
+       {{#each users as |user|}} 
+   <div class="text-center" id="namestyle">
+    
+      <a href=“mailto{{user.email}}” id="namestyle">👨‍🌾{{user.name}}</a>
+      <br>
+
+   </div> 
+     {{/each}} 
+     
+   </section>
+
+</div>
