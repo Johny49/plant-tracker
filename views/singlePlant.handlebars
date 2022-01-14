@@ -1,16 +1,17 @@
+    {{log this.data}}
     <div class="card mx-auto img-max">
         <div class="card-header  text-center"><h2>{{plant.name}}</h2></div>
-        <img src="{{plant.medium_url}}" class="card-img-top" alt="{{plant.name}}">
+        <img src="{{pic}}" class="card-img-top" alt="{{plant.name}}">
         <div class="card-body">
           <h5>&#127807;&numsp;  Nickname: {{plant.nickname}}</h5>
           <br>
-          <h6 class="fw-bold">&#127807;&numsp; Notes From {{User}}:</h6>
-          <p>{{Note}} Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h6 class="fw-bold">&#127807;&numsp; Notes:</h6>
+          <p>{{plant.note}}</p>
           <br>
-          <h6>&#127807;&numsp; Preferred Common Name(s): {{plant.preferred_common_name}}</h6>
+          <h6>&#127807;&numsp; Preferred Common Name(s): {{common}}</h6>
           <br>
           <div class="text-center">
-              <a href={{plant.wikipedia_url}} class="btn btn-success">Read More About {{plant.name}} on Wikipedia</a>
+              <a href={{wikipedia}} class="btn btn-success">Read More About {{plant.name}} on Wikipedia</a>
           </div>
         </div>
       </div>

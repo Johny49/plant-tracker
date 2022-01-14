@@ -28,14 +28,6 @@ router.get('/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get('/:user_id/plant/:id', withAuth, async (req, res) => {
-    try {
-        const plantData = await Plant.findByPk(req.params.id);
-        const plant = plantData.get({plain: true})
-        res.render('plant', {plant, logged_in: req.session.logged_in}) 
-    } catch (err){
-        res.status(500).json(err);
-    }
-});
+
 
 module.exports = router;
