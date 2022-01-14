@@ -15,11 +15,9 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="/">&#127793;
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+   
       </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <div class="navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/login">Login/Signup</a>
@@ -34,10 +32,10 @@
             <a class="nav-link" href="/addPlant">Add Your Plant</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="User Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        {{log this}}
+      {{#if logged_in}}
+        <button class="btn btn-success" id="logout">Logout</button>
+       {{/if}}
       </div>
     </div>
   </nav>
@@ -53,6 +51,9 @@
   <main>
    {{{body}}}
 </main>
+ {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

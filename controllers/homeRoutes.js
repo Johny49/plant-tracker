@@ -20,7 +20,7 @@ router.get('/login', (req, res) =>{
 
 router.get('/addPlant', (req, res) =>{
     try {
-        res.render('addPlant');
+        res.render('addPlant',{logged_in:req.session.logged_in});
     } catch (err) {
         res.status(500).json(err)
     }
