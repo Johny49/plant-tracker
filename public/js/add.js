@@ -8,7 +8,7 @@ const note = document.querySelector('#notes').value.trim();
 
 
 
-if(plantname && nickname && notes){
+if(name && nickname && note){
     const response = await fetch('/api/plant', {
         method: 'POST',
         body: JSON.stringify({name, nickname, note}),

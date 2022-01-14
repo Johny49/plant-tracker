@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {Plant} = require('../../models');
 
 router.post('/', async (req, res) => {
-    console.log(req.session.user_id);
+    
     try { 
         const plant = await Plant.create({
             ...req.body,
@@ -10,6 +10,7 @@ router.post('/', async (req, res) => {
         }); 
         return res.json(plant)
     } catch (err) {
+        console.log(err);
         res.status(500).json(err);
     }
 })
