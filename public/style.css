@@ -12,14 +12,27 @@
 
 .imgSize{
   height: 300px;
-  width: auto;
-  
-  
+  width: auto;  
 }
 
 .img-max {
+  max-height: 600px;
   max-width: 1000px;
-  width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: scale-down;
+}
+
+.card-max {
+  max-height: 750px;
+  max-width: 1150px;
+  height: auto;
+  width: auto;
+  align-items: center;
+}
+
+.left-indent {
+  margin-left: 24px;
 }
 
 .login-card {
