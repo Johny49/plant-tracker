@@ -1,17 +1,21 @@
-    {{log this.data}}
-    <div class="card mx-auto img-max">
-        <div class="card-header  text-center"><h2>{{plant.name}}</h2></div>
-        <img src="{{pic}}" class="card-img-top" alt="{{plant.name}}">
-        <div class="card-body">
-          <h5>&#127807;&numsp;  Nickname: {{plant.nickname}}</h5>
-          <br>
-          <h6 class="fw-bold">&#127807;&numsp; Notes:</h6>
-          <p>{{plant.note}}</p>
-          <br>
-          <h6>&#127807;&numsp; Preferred Common Name(s): {{common}}</h6>
-          <br>
-          <div class="text-center">
-              <a href={{wikipedia}} class="btn btn-success">Read More About {{plant.name}} on Wikipedia</a>
-          </div>
-        </div>
+<section>
+  <div class="card mx-auto card-max">
+    <div class="card-header text-center">
+      <h2>{{plant.name}}</h2>
+    </div>
+    <img src="{{pic}}" class="card-img-top img-max" alt="{{plant.name}}">
       </div>
+
+    <div class="card-body left-indent">
+      <h5>&#127807;&numsp; Nickname: {{plant.nickname}}</h5>
+      <br>
+      <h5 class="fw-bold">&#127807;&numsp; Notes:</h5>
+      <p>&numsp;&numsp;&numsp;{{plant.note}}</p>
+      <br>
+      <h5>&#127807;&numsp; Preferred Common Name(s): {{common}}</h5>
+      <br>
+      <div class="text-center">
+        <a href={{wikipedia}} class="btn btn-success">Read More About {{plant.name}} on Wikipedia</a>
+      </div>
+    </div>
+</section>

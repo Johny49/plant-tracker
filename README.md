@@ -19,23 +19,21 @@ Plant tracker is a web-based application that allows users to enter and store in
 ![Screenshot of app inital screen](./assets/readme-screenshot.png)
 
 
-## Database Schema	!! Review and Update this !!
+## Database Schema
 (plant_db)
 
 	• Plants
 	    ◦ id
 	    ◦ name
+	    ◦ nickname
+	    ◦ note
+		◦ user_id
 
 	• Users
 	    ◦ id
 	    ◦ name
 	    ◦ email
 	    ◦ password
-
-    •	Notes
-	    ◦ id
-	    ◦ user_id (References the `User` model's `id`)
-	    ◦ plant_id (References the `Plant` model's `id`)
 
 
 ## Usage
@@ -76,7 +74,10 @@ Created by:
 
 
 ## Project Status
-Project is: in development 
+Project is: completed
 
 Potential future improvements include:
-* 
+* Add support for users to upload their own plant images
+* Allow users to add search and add a plant from a list
+* Allow commenting on another user’s plants
+* Support deleting and modifying saved plants
