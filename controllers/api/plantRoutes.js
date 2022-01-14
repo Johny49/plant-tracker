@@ -1,16 +1,13 @@
 const router = require('express').Router();
 const {Plant} = require('../../models');
-const axios = require('axios'); 
 
-
-router.post('/:name', async (req, res) => {
+router.post('/', async (req, res) => {
+    console.log(req.session.user_id);
     try { 
-        console.log("HERE")
-        const result = await axios.get(`https://api.inaturalist.org/v1/taxa?q=${req.params.name}`);
-        // console.log(result.data.result.results);
-        return res.json(result.data.results[0]);
-        
-        const plant = await Plant.create(req.body); //NOT SURE YET OF WHAT GOING TO BE ADDED
+        const plant = await Plant.create({
+            ...req.body,
+            user_id: req.session.user_id,
+        }); 
         return res.json(plant)
     } catch (err) {
         res.status(500).json(err);

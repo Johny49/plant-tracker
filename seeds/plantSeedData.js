@@ -2,17 +2,26 @@ const {Plant} = require('../models');
 
 const plantData =[
     {
-        "id":"1434234231",
-        "name":"Fern"
+        "id":"1",
+        "name":"Fern",
+        "nickname":"jigglypoof",
+        "note":"caught this bad boy in mt moon",
+        "user_id":"1"
     },
     {
-        "id":"5678678",
-        "name":"Hibiscus"
+        "id":"2",
+        "name":"Hibiscus",
+        "nickname":"Boris",
+        "note":"my favorite pink plant",
+        "user_id":"2",
 
     },
     {
-        "id":"14340982",
-        "name":"Lion's Mane"
+        "id":"3",
+        "name":"Lion's Mane",
+        "nickname":"Michael",
+        "note":"named after my ex",
+        "user_id":"3",
 
     }
 ]
