@@ -1,5 +1,14 @@
 const router = require('express').Router();
 const {Plant} = require('../../models');
+const withAuth = require('../../utils/auth');
+
+router.get('/', withAuth, (req,res) => {
+    try {
+        res.render('addPlant', {logged_in: req.session.logged_in})
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
 
 router.post('/', async (req, res) => {
     
